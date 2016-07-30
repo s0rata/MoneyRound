@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MoneyRound</title>
+  </head>
+  <body>
+    <p>Enter any number</p>
+    <input type="text" id="demo"/>
+    
+    <button onclick="myFunction()">Round</button>
+    
+    <script>
+    function myFunction() {
+        document.getElementById("demo").value = Math.round(document.getElementById("demo").value / 100) * 100;
+    }
+    </script>
+  </body>
+</html>
