@@ -1,12 +1,11 @@
-
+>
 
 <!DOCTYPE html>
 <html>
   <head>
     <title>MoneyRound</title>
   </head>
-  <body>
-    
+  <body
     <script>
       window.fbAsyncInit = function() {
         FB.init({
@@ -15,7 +14,11 @@
           version    : 'v2.6'
         });
       };
-
+      FB.ui(
+       {
+        method: 'share',
+        href: 'https://developers.facebook.com/docs/'
+      }, function(response){});
       (function(d, s, id){
          var js, fjs = d.getElementsByTagName(s)[0];
          if (d.getElementById(id)) {return;}
@@ -24,14 +27,17 @@
          fjs.parentNode.insertBefore(js, fjs);
        }(document, 'script', 'facebook-jssdk'));
     </script>
+    
+    
     <p>Enter any number</p>
     <input type="text" id="demo"/>
     <button onclick="myFunction()">Round</button>
-    
     <fb:login-button 
       scope="public_profile,email"
       onlogin="checkLoginState();">
     </fb:login-button>
+    
+    
     <script>
     function myFunction() {
         document.getElementById("demo").value = Math.round(document.getElementById("demo").value / 100) * 100;
